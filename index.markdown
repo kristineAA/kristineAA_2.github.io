@@ -9,7 +9,7 @@ title: "Fraudules Transactions in The United States"
 
 # Credit card fraud
 
-In order to investigate trends around credit card fraud, a data set containing information about 1.3 million credit card transactions in the US, as well as age, gender and location of the people who have been victims for the fraud credit card transmissions. Furthermore, it contains attributes with information about the fraud place…
+In order to investigate trends around credit card fraud, a data set containing information about 1.3 million credit card transactions in the US, as well as age, gender and location of the people who have been victims for the fraud credit card transmissions. Furthermore it contains attributes with information about the timestamp of the transaction, the credit card number used for the transaction, the name of the merchant where the transaction occurred and the category of the merchant (e.g., grocery, entertainment, gas).
 
 Using this data, we seek to determine whether distinct patterns emerge in credit card fraud incidents. Specifically, we aim to investigate if there are any characteristics identifying who is more frequently targeted and whether fraud occurrences spike during the holiday season. 
 
