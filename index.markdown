@@ -31,22 +31,15 @@ Given the presence of random fraud spikes and a dataset spanning only 17 months,
 
 <figure>
     <iframe src="Assets/transactions_by_month_and_category.html" width="100%" height="600" style="border:none;"></iframe>
-    <figcaption>Figure 3: Monthly transaction volumes by category from January 2019 to May 2020. The stacked bar chart shows that transactions are broadly distributed across categories, with a significant spike in December 2019. Categories like grocery_pos and shopping_net consistently contribute a large share, aligning with patterns seen in fraudulent activity. </figcaption>
+    <figcaption>Figure 3a: Monthly transaction volumes by category from January 2019 to May 2020. The stacked bar chart shows that transactions are broadly distributed across categories, with a significant spike in December 2019. Categories like grocery_pos and shopping_net consistently contribute a large share, aligning with patterns seen in fraudulent activity. </figcaption>
+</figure>
+<figure>
+    <iframe src="Assets/fraud_transactions_by_month_and_category.html" width="100%" height="600" style="border:none;"></iframe>
+    <figcaption>Figure 3b: Monthly fraudulent transaction volumes by category from January 2019 to May 2020. The chart highlights that grocery_pos, shopping_net, and shopping_pos consistently dominate fraudulent activity across months, rather than being limited to seasonal spikes. </figcaption>
 </figure>
 
-<div style="display: flex; gap: 20px;">
-  <figure style="flex: 1;">
-    <iframe src="Assets/transactions_by_month_and_category.html" width="100%" height="300" style="border:none;"></iframe>
-    <figcaption>Figure 3a: Monthly transaction volumes by category from January 2019 to May 2020. The stacked bar chart shows that transactions are broadly distributed across categories, with a significant spike in December 2019. Categories like grocery_pos and shopping_net consistently contribute a large share, aligning with patterns seen in fraudulent activity. </figcaption>
-  </figure>
 
-  <figure style="flex: 1;">
-    <iframe src="Assets/fraud_transactions_by_month_and_category.html" width="100%" height="300" style="border:none;"></iframe>
-    <figcaption>Figure 3b: Monthly fraudulent transaction volumes by category from January 2019 to May 2020. The chart highlights that grocery_pos, shopping_net, and shopping_pos consistently dominate fraudulent activity across months, rather than being limited to seasonal spikes.</figcaption>
-  </figure>
-</div>
-
-Above, an initial interactive plot suggests that overall transactions are fairly evenly distributed across 13 categories. Yet, the bar chart below focusing on fraudulent transactions highlights that the grocery_pos and shopping_net categories stand out. When examining a dedicated interactive plot of fraudulent transactions, it becomes clear that the main categories are grocery_pos, shopping_net, and shopping_pos. Although one might infer that increased gift or grocery shopping during the holidays drives these spikes, which could confirm the idea that a trend of fraud occurs more in the holidays, further analysis shows that these categories not only dominate in December but are consistently prevalent throughout the year. 
+Above are two interactive plots. Looking at the top, this initial plot suggests that overall transactions are fairly evenly distributed across 13 categories. Yet, the bar chart below focusing on fraudulent transactions highlights that the grocery_pos and shopping_net categories stand out. When examining a dedicated interactive plot of fraudulent transactions under, it becomes clear that the main categories are grocery_pos, shopping_net, and shopping_pos. Although one might infer that increased gift or grocery shopping during the holidays drives these spikes, which could confirm the idea that a trend of fraud occurs more in the holidays, further analysis shows that these categories not only dominate in December but are consistently prevalent throughout the year. 
 
 <figure>
   <img src="Assets/fraud_transactions_by_category.png" alt="Fraud_by_Category" />
