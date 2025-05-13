@@ -110,4 +110,4 @@ However, the dataset does contain enough transactional data to identify potentia
 * [1] Sarah Poppleton, Kitty;  Lymperopoulou, Julian Molina; "Who suffers fraud? Understanding the fraud victim landscape"; 13/10/2021; https://victimscommissioner.org.uk/document/who-suffers-fraud-understanding-the-fraud-victim-landscape/
 * [2] West Midlands Police; "Make sure you have a #FraudFreeXmas: Watch out for these 12 fraud types this Christmas"; 18/12/2024; https://www.westmidlands.police.uk/news/west-midlands/news/news/2024/december/make-sure-you-have-a-fraudfreexmas-watch-out-for-these-12-fraud-types-this-christmas/
 
-Link to GitHub repo: *https://github.com/kristineAA/kristineAA_2.github.io/tree/main/Assets*
+Link to GitHub repo: *https://github.com/kristineAA/kristineAA_2.github.io/tree/main* . Explainer notebook can be found under "Assets"
