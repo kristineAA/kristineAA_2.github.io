@@ -36,13 +36,13 @@ Given the presence of random fraud spikes and a dataset spanning only 17 months,
 
 <div style="display: flex; gap: 20px;">
   <figure style="flex: 1;">
-    <iframe src="Assets/transactions_by_month_and_category.html" width="100%" height="600" style="border:none;"></iframe>
-    <figcaption>Figure 3: Monthly transaction volumes by category from January 2019 to May 2020...</figcaption>
+    <iframe src="Assets/transactions_by_month_and_category.html" width="50%" height="600" style="border:none;"></iframe>
+    <figcaption>Figure 3a: Monthly transaction volumes by category from January 2019 to May 2020. The stacked bar chart shows that transactions are broadly distributed across categories, with a significant spike in December 2019. Categories like grocery_pos and shopping_net consistently contribute a large share, aligning with patterns seen in fraudulent activity. </figcaption>
   </figure>
 
   <figure style="flex: 1;">
-    <iframe src="Assets/fraud_transactions_by_month_and_category.html" width="100%" height="600" style="border:none;"></iframe>
-    <figcaption>Figure 4: Fraudulent transactions by merchant category showing grocery_pos and shopping_net as dominant categories...</figcaption>
+    <iframe src="Assets/fraud_transactions_by_month_and_category.html" width="50%" height="600" style="border:none;"></iframe>
+    <figcaption>Figure 3b: Monthly fraudulent transaction volumes by category from January 2019 to May 2020. The chart highlights that grocery_pos, shopping_net, and shopping_pos consistently dominate fraudulent activity across months, rather than being limited to seasonal spikes.</figcaption>
   </figure>
 </div>
 
@@ -112,5 +112,5 @@ However, the dataset does contain enough transactional data to identify potentia
 
 
 # Literature
-* [1] Sarah Poppleton, Kitty;  Lymperopoulou, Julian Molina; "Who suffers fraud? Understanding the fraud victim landscape"; 13/10/2021
-* [2] West Midlands Police; "Make sure you have a #FraudFreeXmas: Watch out for these 12 fraud types this Christmas"; 18/12/2024 
+* [1] Sarah Poppleton, Kitty;  Lymperopoulou, Julian Molina; "Who suffers fraud? Understanding the fraud victim landscape"; 13/10/2021; https://victimscommissioner.org.uk/document/who-suffers-fraud-understanding-the-fraud-victim-landscape/
+* [2] West Midlands Police; "Make sure you have a #FraudFreeXmas: Watch out for these 12 fraud types this Christmas"; 18/12/2024; https://www.westmidlands.police.uk/news/west-midlands/news/news/2024/december/make-sure-you-have-a-fraudfreexmas-watch-out-for-these-12-fraud-types-this-christmas/
