@@ -6,9 +6,6 @@ layout: home
 title: "Fraudules Transactions in The United States"
 ---
 
-
-# Credit card fraud
-
 In order to investigate trends around credit card fraud, a data set containing information about 1.3 million credit card transactions in the US, as well as age, gender and location of the people who have been victims for the fraud credit card transmissions. Furthermore it contains attributes with information about the timestamp of the transaction, the credit card number used for the transaction, the name of the merchant where the transaction occurred and the category of the merchant (e.g., grocery, entertainment, gas).
 
 Using this data, we seek to determine whether distinct patterns emerge in credit card fraud incidents. Specifically, we aim to investigate if there are any characteristics identifying who is more frequently targeted and whether fraud occurrences spike during the holiday season. 
@@ -16,37 +13,49 @@ Using this data, we seek to determine whether distinct patterns emerge in credit
 
 ## Fraud occurrences during the holiday season
 
-For instance, West Midlands Police recently published an article titled *“Make sure you have a #FraudFreeXmas: Watch out for these 12 fraud types this Christmas”*, which notes that fraudsters often exploit the festive mood to deceive unsuspecting individuals. Although this insight comes from a UK source, our analysis will explore if such trends are also evident in the US.
+For instance, West Midlands Police recently published an article titled *“Make sure you have a #FraudFreeXmas: Watch out for these 12 fraud types this Christmas”*[1], which notes that fraudsters often exploit the festive mood to deceive unsuspecting individuals. Although this insight comes from a UK source, our analysis will explore if such trends are also evident in the US.
 
-<figure>
-  <img src="Assets/calendar_plot_fraun.png" alt="Calender_Plot_fraud" />
-  <figcaption>Figure 1: WRITE A CAPTION.</figcaption>
+<figure style="width: 80%; margin: auto;">
+    <img src="Assets/calendar_plot_fraun.png" alt="Calender_Plot_fraud" style="width: 100%;" />
+    <figcaption>Figure 1: Calendar heatmaps showing daily counts of fraudulent transactions in 2019 and 2020. The color intensity indicates the number of fraud cases per day, with red denoting higher activity. Notable spikes in late December suggest increased fraud risk around the holiday season, especially on December 23.</figcaption>
 </figure>
 
 An examination of the calendar plot for fraudulent transactions above reveals two standout days in December with notably high fraud counts compared to many days with little or no activity. This pattern suggests that, much like trends observed by UK authorities, fraudsters in the US may be capitalizing on the festive season. However, a comprehensive calendar plot of all transactions, which can be seen below, shows that December inherently experiences a higher volume of activity relative to other months. As a result, while the absolute number of fraudulent transactions rises during December, the proportion of fraud relative to the overall transaction volume might remain constant. A particularly striking spike on December 23 may indicate that last-minute shoppers—under pressure from holiday deadlines—could be less vigilant, rendering them more susceptible to fraud.
 
 <figure>
   <img src="Assets/calendar_plot_all_transactions.png" alt="Calender_Plot_all" />
-  <figcaption>Figure 2: WRITE A CAPTION.</figcaption>
+  <figcaption>Figure 2: Calendar heatmaps showing daily counts of all transactions in the dataset in 2019 and 2020. The plots reveal a naturally higher transaction volume in December, particularly around the holidays, which may explain the observed increase in fraudulent activity during this period..</figcaption>
 </figure>
 
 Given the presence of random fraud spikes and a dataset spanning only 17 months, it is challenging to draw definitive conclusions about seasonal trends based solely on specific dates. Therefore, it is worthwhile to explore additional dimensions. One approach is to analyze which fraud categories predominate over the course of the year and, more specifically, which types peak during the Christmas season.
 
 <figure>
     <iframe src="Assets/transactions_by_month_and_category.html" width="100%" height="600" style="border:none;"></iframe>
-    <figcaption>Figure 3: </figcaption>
+    <figcaption>Figure 3: Monthly transaction volumes by category from January 2019 to May 2020. The stacked bar chart shows that transactions are broadly distributed across categories, with a significant spike in December 2019. Categories like grocery_pos and shopping_net consistently contribute a large share, aligning with patterns seen in fraudulent activity. </figcaption>
 </figure>
+
+<div style="display: flex; gap: 20px;">
+  <figure style="flex: 1;">
+    <iframe src="Assets/transactions_by_month_and_category.html" width="100%" height="600" style="border:none;"></iframe>
+    <figcaption>Figure 3: Monthly transaction volumes by category from January 2019 to May 2020...</figcaption>
+  </figure>
+
+  <figure style="flex: 1;">
+    <iframe src="Assets/fraud_transactions_by_month_and_category.html" width="100%" height="600" style="border:none;"></iframe>
+    <figcaption>Figure 4: Fraudulent transactions by merchant category showing grocery_pos and shopping_net as dominant categories...</figcaption>
+  </figure>
+</div>
 
 Above, an initial interactive plot suggests that overall transactions are fairly evenly distributed across 13 categories. Yet, the bar chart below focusing on fraudulent transactions highlights that the grocery_pos and shopping_net categories stand out. When examining a dedicated interactive plot of fraudulent transactions, it becomes clear that the main categories are grocery_pos, shopping_net, and shopping_pos. Although one might infer that increased gift or grocery shopping during the holidays drives these spikes, which could confirm the idea that a trend of fraud occurs more in the holidays, further analysis shows that these categories not only dominate in December but are consistently prevalent throughout the year. 
 
 <figure>
   <img src="Assets/fraud_transactions_by_category.png" alt="Fraud_by_Category" />
-  <figcaption>Figure 4: </figcaption>
+  <figcaption>Figure 4: Bar chart showing the number of fraudulent transactions by merchant category. Grocery_pos and shopping_net lead by a significant margin, indicating these categories are prime targets for fraud regardless of season, with other categories like misc_net and shopping_pos also showing notable counts. </figcaption>
 </figure>
 
 
 ## Victim characteristics
-In a study conducted by the Victim Commissioner titled *"Who Suffers Fraud?"* Understanding the Fraud Victim Landscape, several characteristics were identified as potential risk factors that increase an individual's vulnerability to fraud in the UK. These factors include age, socio-economic status, relationship status, ethnicity, life events, immigration, technology usage, social networks, previous victimization, and a range of psychological variables.
+In a study conducted by the Victim Commissioner titled *"Who Suffers Fraud?" Understanding the Fraud Victim Landscape*[2], several characteristics were identified as potential risk factors that increase an individual's vulnerability to fraud in the UK. These factors include age, socio-economic status, relationship status, ethnicity, life events, immigration, technology usage, social networks, previous victimization, and a range of psychological variables.
 
 Utilizing the provided dataset, we can now assess whether these characteristics similarly act as risk factors in the US context. In particular, our investigation will focus on examining gender, age, and place of residence as potential indicators of an increased risk of experiencing fraud.
 
@@ -65,12 +74,12 @@ When analyzing fraud incidents across different age groups, the data clearly ind
 | 86 – 100  | 67,891       | 66                       | 0.916%                     |
 
 ### Gender
-Below are 2 plots. The left plot displays the number of fraudulent transactions by gender and reveals an almost equal distribution between males and females. This suggests that, in absolute terms, fraudulent activity does not heavily favor one gender over the other. In contrast, the right plot shows the distribution of non-fraudulent transactions by gender, and it indicates that the overall dataset includes slightly more female transactions—exceeding male transactions by just over 100,000.
+The left plot on below displays the number of fraudulent transactions by gender and reveals an almost equal distribution between males and females. This suggests that, in absolute terms, fraudulent activity does not heavily favor one gender over the other. In contrast, the right plot shows the distribution of non-fraudulent transactions by gender, and it indicates that the overall dataset includes slightly more female transactions—exceeding male transactions by just over 100,000.
 This discrepancy implies that, while the raw numbers of fraud cases are similar between genders, men might be proportionately more vulnerable to fraud given that they represent a smaller share of the overall transaction volume.
 
 <figure>
-  <img src="Assets/gender_dist.png" alt="Fraud_by_Category" />
-  <figcaption>Figure 5: </figcaption>
+  <img src="Assets/gender_dist.png" alt="Fraud_by_gender" />
+  <figcaption>Figure 5: Comparison of fraudulent and non-fraudulent transactions by gender. While fraudulent transactions are nearly equal between males and females, non-fraudulent transactions are more common among females. This suggests men may be disproportionately targeted by fraud relative to their overall transaction activity. </figcaption>
 </figure>
 
 ### Place of living
@@ -78,7 +87,7 @@ To assess whether geographical location influences the risk of fraud victimizati
 
 <figure>
     <iframe src="Assets/map.html" width="100%" height="600" style="border:none;"></iframe>
-    <figcaption>Figure 6: </figcaption>
+    <figcaption>Figure 6: Map of fraudulent transaction occurrences across the United States. The concentration of red markers suggests higher fraud activity on the East Coast, though interpretation is limited by marker overlap and lack of normalization for population density. </figcaption>
 </figure>
 
 Examining the percentage of fraudulent transactions by state in the below table provides a clearer perspective. Our analysis reveals that the states with the highest fraud percentages are Delaware, Rhode Island, Alaska, Nevada, Colorado, and Tennessee, while those with the lowest percentages are Hawaii, Montana, Connecticut, and Idaho. This finding contradicts the initial map's impression—which appeared to show higher fraud concentrations exclusively along the East Coast—as it shows that high percentages also occur on the West Coast, and some Eastern states may even have lower rates. This inconsistency highlights the importance of considering state-specific factors, such as overall transaction volume and population, to fully understand the geographic trends in fraud.
@@ -102,4 +111,6 @@ Throughout our analysis, it became clear that the dataset's limited time span of
 However, the dataset does contain enough transactional data to identify potential risk factors, such as age, gender and place of living.
 
 
-
+# Literature
+* [1] Sarah Poppleton, Kitty;  Lymperopoulou, Julian Molina; "Who suffers fraud? Understanding the fraud victim landscape"; 13/10/2021
+* [2] West Midlands Police; "Make sure you have a #FraudFreeXmas: Watch out for these 12 fraud types this Christmas"; 18/12/2024 
